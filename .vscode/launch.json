@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: trading test実行",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/trading_test.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\venv\\Lib\\site-packages",
+            },
+            "python": "python"
+        },
+        {
+            "name": "Python: ファイルをデバッグ",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\venv\\Lib\\site-packages",
+            },
+            "python": "python"
+        },
+        {
+            "name": "st debug",
+            "type": "python",
+            "request": "launch",
+            "module": "streamlit",                 // appの代わりにコレ
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+            },
+            "args": [                              // オプションはコレ
+                "run",
+                "view_result.py",
+                "--server.port",
+                "8502"
+            ]
+        },
+    ]
+}
